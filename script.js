@@ -1,6 +1,6 @@
 let scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-
+let settingsBtn = document.getElementById('gear');
+let settingsModal = document.getElementById('settingsModal');
 
 
 const scrollBtnAppears = () => {
@@ -33,6 +33,12 @@ function targetscrolltoTop(){
 }
 
 
+function openSettingsModal(){
+    settingsModal.style.display = "block";
+}
+
 window.onscroll = function() {scrollBtnAppears()};
 
 scrollToTopBtn.addEventListener("click", scrolltoTopFunction);
+
+settingsBtn.addEventListener("click", openSettingsModal);
