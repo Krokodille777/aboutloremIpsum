@@ -15,6 +15,11 @@ body{
     font-family: Arial, sans-serif;
 }
 
+#main-header h1{
+    position: relative;
+    bottom: 10px;
+}
+
 .contentBox{
     line-height: 1.6;
     padding: 15px;
@@ -115,4 +120,26 @@ footer{
 }
 #scrollToTopBtn:hover {
     background-color: #45a049;
+}
+
+nav{
+    display: flex;
+    justify-content: right;
+    position: relative;
+    right: 20px;
+      overflow: hidden;
+    border-radius: 5px;
+}
+nav button{
+    background-color: #409643;
+    color: white;
+    border: none;
+    
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+nav button:hover {
+    background-color: #3b7a33;
 }
