@@ -1,4 +1,11 @@
+const delay = ms => newPromise(res => setTimeout(res,ms));
+
+
+
 let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+
+delay(1000).then(() => {
 
 const scrollBtnAppears = () => {
     return new Promise(resolve =>{
@@ -26,7 +33,7 @@ function scrolltoTopFunction(){
     }
     
 }
-
+});
 
 window.onscroll = function() {scrollBtnAppears()};
 
