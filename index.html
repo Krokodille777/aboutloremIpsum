@@ -17,6 +17,7 @@
         <div class = "contentBox">
             <div id = "firstSlide">
                 <h2 id ="intro">Ознайомлення</h2>
+                <hr>
                 <div class = "content1">
                     <p>Lorem ipseum dolor sit amet ...,  цей вираз такий ж популярний як і "hello, world!" серед програмістів. 
                         Незважаючи на те, де його використовують, Lorum Ipsum залишається стандартом де-факто для тексту-заповнювача в галузі друку та веб-дизайну.
@@ -24,9 +25,12 @@
                     </p>
                     <img id = "LoremIpsumphoto" alt = "Lorem Ipsum"> 
                 </div>
+                <hr class = "finishSlidehr">
             </div>
+            
             <div id = "secondSlide">
                 <h2 id = "secondh2">З Чого Все Почалося?</h2>
+                <hr>
                 <div class = "content2">
                     <img id="Cicero" alt = "Cicero">
                     <p>А все почалося ще в далекому 45 році до нашої ери, у самому серці Римської імперії.
@@ -73,6 +77,26 @@
 
         <div class = "Xtras">
             <button id = "scrollToTopBtn">▲</button>
+
+            <div class = "settingsModal">
+                <div class = "settings-header">
+                    <h2>Settings</h2>
+                    <span class="close-btn">&times;</span>
+                </div>
+                <div class = "settings-content">
+                    <div id = "Theme">
+                        <h3>Theme:</h3>
+                        <button id = "toggleThemeBtn">Dark mode</button>
+                    </div>
+                    <div id = "EngOrUkr">
+                        <h3>Language:</h3>
+                        <button id = "toggleLanguageBtn">English</button>
+                    </div>
+                </div>
+                <div class = "settings-footer">
+                    <button id = "saveChangesBtn">Save</button>
+                </div>
+            </div>
         </div>
         <script src="script.js"></script>
     </body>
