@@ -28,7 +28,18 @@ body{
     font-size: 16px;
     
 }
-
+.contentBox #secondSlide{
+    font-family: "Arial ", Gadget, sans-serif;
+    font-size: 16px;
+    
+}
+blockquote{
+    font-style: italic;
+    color: #555555;
+    border-left: 4px solid #cccccc;
+    margin: 10px 0;
+    padding-left: 10px;
+}
 h2{
     font-family: "Arial ", Gadget, sans-serif;
     font-size: 24px;
@@ -42,13 +53,17 @@ h2{
     border-radius: 5px;
     position: relative;
     right: 50px;
-    box-shadow: 5px 5px 5px grey;
-    transition: all 0.3s ease-in;
+    
 }
-#LoremIpsumphoto:hover{
-    box-shadow: 10px 10px 10px grey;
-    scale: 1.05;
+
+img{
+    transition: all 0.3s ease-in;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+img:hover{
+    transform: scale(1.05);
     transition: all 0.3s ease-out;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
 }
 .contentBox .content1{
     display: flex;
@@ -57,3 +72,24 @@ h2{
     border-radius: 5px;
     gap: 300px;
 }
+
+.contentBox .content2{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+footer{
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
