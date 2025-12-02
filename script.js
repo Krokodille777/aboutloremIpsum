@@ -1,11 +1,7 @@
-const delay = ms => newPromise(res => setTimeout(res,ms));
-
-
-
 let scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 
-delay(1000).then(() => {
+
 
 const scrollBtnAppears = () => {
     return new Promise(resolve =>{
@@ -22,18 +18,20 @@ const scrollBtnAppears = () => {
 function scrolltoTopFunction(){
     try{
         scrollBtnAppears();
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        targetscrolltoTop();
     }
     catch(e){
         e = console.error("Error in scrolltoTopFunction: ", e);
     }
-    finally {
-        return;
-    }
     
 }
-});
+function targetscrolltoTop(){
+   window.scrollTo({
+     top: 0,
+     behavior: "smooth"
+   })
+}
+
 
 window.onscroll = function() {scrollBtnAppears()};
 
