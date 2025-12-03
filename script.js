@@ -1,6 +1,7 @@
 let scrollToTopBtn = document.getElementById("scrollToTopBtn");
 let settingsBtn = document.getElementById('gear');
-let settingsModal = document.getElementById('settingsModal');
+let settingsModal = document.querySelector('#settingsModal');
+let isOpen = false;
 
 
 const scrollBtnAppears = () => {
@@ -34,7 +35,16 @@ function targetscrolltoTop(){
 
 
 function openSettingsModal(){
-    settingsModal.style.display = "block";
+    if (!isOpen) {
+        settingsModal.style.display = "flex";
+        settingsModal.style.flexDirection = "column";
+        settingsModal.style.alignItems = "center";
+        settingsModal.style.justifyContent = "center";
+        isOpen = true;
+    } else {
+        settingsModal.style.display = "none";
+        isOpen = false;
+    }
 }
 
 window.onscroll = function() {scrollBtnAppears()};
