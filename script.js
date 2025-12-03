@@ -3,6 +3,24 @@ let settingsBtn = document.getElementById('gear');
 let settingsModal = document.querySelector('#settingsModal');
 let isOpen = false;
 
+const langsObject = {
+    "en": "English",
+    "ua": "Українська"
+}
+const darkThemeObject = {
+    "bgColor": "#121212",
+    "textColor": "#FFFFFF",
+    "hrColor": "#2C2C2C",
+    "header-footerColor": "#1f162bff",
+    "borderColor": "#2C2C2C",
+    "buttonColor": "#2C2C2C",
+}
+
+
+
+let closeModalBtn = document.getElementById("close-btn");
+
+
 
 const scrollBtnAppears = () => {
     return new Promise(resolve =>{
@@ -46,9 +64,15 @@ function openSettingsModal(){
         isOpen = false;
     }
 }
+let closeSettingModal = () => {
+    settingsModal.style.display = "none";
+    isOpen = false;
+}
 
 window.onscroll = function() {scrollBtnAppears()};
 
 scrollToTopBtn.addEventListener("click", scrolltoTopFunction);
 
 settingsBtn.addEventListener("click", openSettingsModal);
+
+closeModalBtn.addEventListener("click", closeSettingModal);
