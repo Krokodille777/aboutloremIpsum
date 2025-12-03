@@ -46,7 +46,10 @@ body{
     position: relative;
     bottom: 10px;
 }
-
+.disabled {
+  opacity: 0.5; /* Пример: сделать кнопку полупрозрачной */
+  cursor: default; /* Изменить курсор */
+}
 .contentBox{
     line-height: 1.6;
     padding: 15px;

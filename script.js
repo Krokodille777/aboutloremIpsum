@@ -127,6 +127,7 @@ function translation(){
     
 delay = ms => new Promise(res => setTimeout(res, ms));
 delay(500).then(() => {
+    if (this.dataset.clicked === "false"){
     function saveChanges(){
         if(document.body.classList.contains("dark-theme")){    
             localStorage.setItem("theme", "dark"); //localStorage - це веб-сховище, яке дозволяє зберігати дані у браузері користувача.
@@ -141,6 +142,10 @@ delay(500).then(() => {
         else{
             localStorage.setItem("language", "ukrainian");
         }
+    }
+        saveBtn.dataset.clicked = "true";
+        saveBtn.classList.add("disabled");
+        saveBtn.disabled = true;
 
         saveBtn.style.backgroundColor = "#235025ff"; // Change button color to indicate success
     }
