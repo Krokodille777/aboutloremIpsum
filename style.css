@@ -1,14 +1,41 @@
+:root {
+    /* Light Mode Colors (Your current colors) */
+    --body-bg: aliceblue;
+    --card-bg: #ffffff;
+    --primary-color: #4CAF50;     /* The Green */
+    --primary-hover: #45a049;
+    --text-color: #000000;
+    --text-muted: #555555;
+    --colorforh1h2h3nP: #000000;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --modal-shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Mode Colors (The overrides) */
+body.dark-theme {
+    --body-bg: #121212;           /* Dark gray background */
+    --card-bg: #1E1E1E;           /* Slightly lighter for content boxes */
+    --primary-color: #388E3C;     /* Slightly dimmer green for eyes */
+    --primary-hover: #2E7D32;
+          /* Off-white text */
+    --text-muted: #B0B0B0;        /* Light gray for quotes */
+    --border-color: #e0e0e0;
+    --colorforh1h2h3nP: #FFFFFF;
+    --modal-shadow: rgba(82, 82, 82, 0.9);
+    --text-color: #FFFFFF;
+}
+
 body{
     width: 750px;
     margin: 0 auto;
-    background-color: aliceblue;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--body-bg);
+    border: 1px solid var(--border-color);
 
 }
 
 #main-header {
-    background: #4CAF50;
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-color);
     padding: 10px 0;
     text-align: center;
     font-size: 24px;
@@ -26,22 +53,32 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: #ffffff;
+    background-color: var(--card-bg);
 }
 .contentBox #firstSlide{
     font-family: "Arial ", Gadget, sans-serif;
     font-size: 16px;
-    
+    color: var(--colorforh1h2h3nP);
 }
 .contentBox #secondSlide{
     font-family: "Arial ", Gadget, sans-serif;
     font-size: 16px;
-    
+    color: var(--colorforh1h2h3nP);
+}
+.contentBox #thirdSlide{
+    font-family: "Arial ", Gadget, sans-serif;
+    font-size: 16px;
+    color: var(--colorforh1h2h3nP);  
+}
+.contentBox #fourthSlide{
+    font-family: "Arial ", Gadget, sans-serif;
+    font-size: 16px;
+    color: var(--colorforh1h2h3nP);
 }
 blockquote{
     font-style: italic;
-    color: #555555;
-    border-left: 4px solid #cccccc;
+    color: var(--text-muted);
+    border-left: 4px solid var(--border-color);
     margin: 10px 0;
     padding-left: 10px;
 }
@@ -63,12 +100,12 @@ h2{
 
 img{
     transition: all 0.3s ease-in;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 2px 5px var(--modal-shadow);
 }
 img:hover{
     transform: scale(1.05);
     transition: all 0.3s ease-out;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9);
+    box-shadow: 4px 4px 10px var(--modal-shadow);
 }
 .contentBox .content1{
     display: flex;
@@ -93,9 +130,16 @@ img:hover{
     border-radius: 5px;
     gap: 10px;
 }
+
+p{
+    font-family: "Arial ", Gadget, sans-serif;
+    font-size: 16px;
+    color: var(--colorforh1h2h3nP);
+}
+
 footer{
-    background: #4CAF50;
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     padding: 10px 0;
     position: relative;
@@ -109,17 +153,17 @@ footer{
     right: 20px;
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     border: none;
     display: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px var(--modal-shadow);
     transition: background-color 0.3s ease;
 }
 #scrollToTopBtn:hover {
-    background-color: #45a049;
+    background-color: var(--primary-hover);
 }
 
 nav{
@@ -131,8 +175,8 @@ nav{
     border-radius: 5px;
 }
 nav button{
-    background-color: #409643;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     border: none;
     
     cursor: pointer;
@@ -155,11 +199,11 @@ nav button:hover {
     transform: translate(-50%, -50%);
     width: 150px;
     height: 1000px;
-    background-color: white;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    color: black;
+    box-shadow: 0 0 10px var(--modal-shadow);
+    color: var(--text-color);
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
@@ -170,8 +214,8 @@ nav button:hover {
 
 .settings-header{
     font-size: 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     display: flex;
     padding: 1px 0;
     justify-content: center;
@@ -213,8 +257,8 @@ span:hover{
 .settings-content div button{
     padding: 3px 5px;
     font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     border: none;
     border-radius: 5px;
     position: relative;
@@ -224,7 +268,7 @@ span:hover{
     transition: background-color 0.3s ease;
 }
 .settings-content div button:hover{
-    background-color: #45a049;
+    background-color: var(--primary-hover);
 }
 
 #saveChangesBtn{
@@ -232,14 +276,14 @@ span:hover{
     bottom: 10px;
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px var(--modal-shadow);
     transition: background-color 0.3s ease;
 }
 #saveChangesBtn:hover{
-    background-color: #45a049;
+    background-color: var(--primary-hover);
 }
