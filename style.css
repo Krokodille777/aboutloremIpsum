@@ -172,10 +172,74 @@ nav button:hover {
     font-size: 20px;
     background-color: #4CAF50;
     color: white;
-    padding: 10px 0;
     display: flex;
+    padding: 1px 0;
     justify-content: center;
     flex-direction: row;
-    gap: 10px;
+    align-items: center;
+    position: relative;
+    bottom: 40px;
+    gap: 400px;
+}
+.settings-header h2{
+    position: relative;
+    left: 25px;
 }
 
+.settings-header span{
+    cursor: pointer;
+    font-size: 30px;
+    position: relative;
+    right: 30px;
+}
+span:hover{
+    color: red;
+}
+.settings-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    bottom: 20px;
+}
+
+.settings-content div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+    gap: 250px;
+}
+.settings-content div button{
+    padding: 3px 5px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    top: 25px;
+    height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.settings-content div button:hover{
+    background-color: #45a049;
+}
+
+#saveChangesBtn{
+    position: relative;
+    bottom: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+#saveChangesBtn:hover{
+    background-color: #45a049;
+}
