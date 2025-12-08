@@ -148,7 +148,16 @@ if(localStorage.getItem("theme") === "dark"){
     document.body.classList.add("dark-theme");
     themeBtn.innerText = "Light Mode";
 }
+else{
+    themeBtn.innerText = "Dark Mode";
+}
 
+if (localStorage.getItem("language") === "english"){
+    translation();
+}
+else if (localStorage.getItem("language") === "ukrainian"){
+    // Do nothing, default is Ukrainian
+}
 window.onscroll = function() { scrollBtnAppears() };
 scrollToTopBtn.addEventListener("click", scrolltoTopFunction);
 settingsBtn.addEventListener("click", openSettingsModal);
