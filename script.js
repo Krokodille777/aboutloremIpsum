@@ -25,7 +25,9 @@ resolve();
 };
 function scrolltoTopFunction(){
     try{
+        // Ensure the button visibility is updated before scrolling
         scrollBtnAppears();
+        // Call the scroll to top function
     targetscrolltoTop();
     }
     catch(e){
