@@ -2,7 +2,6 @@ let scrollToTopBtn = document.getElementById("scrollToTopBtn");
 let settingsBtn = document.getElementById('gear');
 let settingsModal = document.querySelector('#settingsModal');
 let closeModalBtn = document.getElementById("close-btn");
-// FIX: Correct variable name to match usage
 let themeBtn = document.getElementById("toggleThemeBtn"); 
 let languageBtn = document.getElementById("toggleLanguageBtn");
 let saveBtn = document.getElementById("saveChangesBtn");
@@ -13,7 +12,7 @@ let isOpen = false;
 
 
 
-// --- Scroll Logic (Kept mostly the same) ---
+// --- Scroll Logic ---
 const scrollBtnAppears = () => {
 return new Promise(resolve =>{
 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -42,7 +41,6 @@ function targetscrolltoTop(){
 function openSettingsModal(){
     if (!isOpen) {
         settingsModal.style.display = "flex";
-        // Recommended: Add these styles in CSS class .modal-open instead of JS
         settingsModal.style.flexDirection = "column"; 
         settingsModal.style.alignItems = "center";
         settingsModal.style.justifyContent = "center";
@@ -57,7 +55,7 @@ let closeSettingModal = () => {
     isOpen = false;
 }
 
-// --- THEME LOGIC (The Fixed Part) ---
+// --- THEME LOGIC ---
 
 function enableThemeSettings() {
     // This simply adds/removes the class 'dark-theme' from the body
